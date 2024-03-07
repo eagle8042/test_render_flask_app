@@ -1,6 +1,8 @@
 from flask import Flask
+from fkask import render_template
+
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def homepage():
+    return render_template('homepage.htm')
